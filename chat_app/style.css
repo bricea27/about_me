@@ -1,0 +1,403 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/***** make text history gradually more transparent like on a phone; alternate line background color *****/
+
+header {
+  display: block;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
+
+h1 {
+  font-weight: 500;
+  color: #ecf0f1;
+  font-size: 3.5em;
+}
+
+h1 span {
+  font-weight: 700;
+  color: #1abc9c;
+}
+
+#logout {
+  width: 100px;
+  display: none;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  cursor: pointer;
+  background: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: v;
+  border: 2px solid #1abc9c;
+  font-size: 1em;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#sly {
+  width: 100px;
+  display: none;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  background: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  border: 2px solid #333;
+  font-size: 1em;
+  border-radius: 5px;
+  z-index: 10;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#unsly {
+  width: 100px;
+  display: none;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  background: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  border: 2px solid #333;
+  font-size: 1em;
+  border-radius: 5px;
+  z-index: 9999;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#logout:hover, #logout:active, #sly:hover, #sly:active, #unsly:hover, #unsly:active {
+  background: #1abc9c;
+  color: #000;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+h2 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#userinput {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 20px;
+  background: rgba(0,0,0,0.9);
+  z-index: 10000;
+  position: fixed;
+}
+
+.wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#username {
+  width: 90%;
+  max-width: 800px;
+  height: 100px;
+  font-size: 2.5em;
+  text-align: left;
+  background: #fff;
+  color: #000;
+  margin: auto;
+  border: none;
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+}
+
+#submit {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  background: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+  font-size: 1em;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#submit:hover {
+  background: #1abc9c;
+  color: #fff;
+}
+
+#submit:active {
+  opacity: 0.5;
+}
+
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#display {
+  width: 100%;
+  max-height: 600px;
+  background: #fff;
+  color: #000;
+  font-size: 1.25em;
+  overflow: scroll;
+  position: relative;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  padding-bottom: 80px;
+}
+
+#display li {
+  display: block;
+  padding: 10px 20px;
+  font-family: "Helvetica", arial, sans-serif;
+  border-bottom: 2px solid #FAFAFA;
+}
+
+#display li span {
+  color: #1abc9c;
+}
+
+#display li p {
+  display: inline-block;
+}
+
+#display li:nth-child(even) {
+  background: #FAFAFA;
+}
+
+
+.input {
+  width: 100%;
+  height: 80px;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+  padding: 10px;
+  background: #222;
+}
+
+.text {
+  display: block;
+  width: 80%;
+  height: 100%;
+  float: left;
+  background: #222;
+  color: #fff;
+  font-size: 2em;
+  border: none;
+  padding-left: 10px;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1.0;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+  opacity: 1.0;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;
+  opacity: 1.0;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1.0;
+}
+
+.send {
+  width: 200px;
+  display: inline-block;
+  height: 60px;
+  float: right;
+  cursor: pointer;
+  background: #222;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+  font-size: 1.5em;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+input:focus, button:focus {
+  outline:0
+}
+
+.send:hover {
+  background: #1abc9c;
+  color: #000;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.send:active {
+  opacity: 0.5;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+  .text {
+    width: 70%;
+  }
+
+  .send {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  h1 {
+    font-size: 2.5em;
+    margin-top: 5px;
+  }
+
+  #logout {
+    width: 60px;
+    font-size: 0.6em;
+  }
+
+  #sly, #unsly {
+    width: 60px;
+    font-size: 0.75em;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  h2 {
+    font-size: 2em;
+  }
+
+  #username {
+    height: 80px;
+    font-size: 2em;
+  }
+
+  .text, .send {
+    font-size: 1.25em;
+  }
+}

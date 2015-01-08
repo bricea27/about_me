@@ -1,0 +1,501 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+html, body{
+  height:100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+section {
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 100px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+p {
+  text-align: left;
+  margin: 24px 0;
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+  color: #1F1F1F;
+  line-height: 1.25em;
+}
+
+
+h1 {
+  font-size: 3em;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 1.75em;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  color: #1F1F1F;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.25em;
+  color: #666;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px;
+}
+
+
+a {
+  color: #1F1F1F;
+  text-decoration: none;
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #1cbcc0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* -- Animations
+------------------------------------------------------------- */
+@-webkit-keyframes bgPulse {
+  0% {fill: #1F1F1F;;}
+  100% {fill: #e74c3c;}
+}
+
+@-webkit-keyframes colorPulse {
+  0% {color: #fff;}
+  100% {color: #e74c3c;}
+}
+
+@-webkit-keyframes colorPulse2 {
+  0% {color: #e74c3c;}
+  100% {color: #fff;}
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+/* Parallax base styles
+--------------------------------------------- */
+
+.parallax {
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+
+/* -- Intro Section
+------------------------------------------------------------- */
+.intro {
+  height: 350px;
+  position: relative;
+  background: #000;
+}
+
+.logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px 0;
+  -webkit-animation: bgPulse 2s infinite alternate;
+  cursor: pointer;
+  z-index: 9999;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.logo:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  color: #fff;
+}
+
+header h2 {
+  color: #666;
+}
+
+/* -- Projects Section
+------------------------------------------------------------- */
+.projects li {
+  display: block;
+  width: 33.33%;
+  float: left;
+  padding: 20px;
+}
+
+.projects li a {
+  display: block;
+  width: 100%;
+  height: 280px;
+  color: #fff;
+  background: #1F1F1F;
+  position: relative;
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.projects li a h3 {
+  width: 100%;
+  color: #fff;
+  line-height: 260px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.projects li a:hover {
+  background: #e74c3c;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.projects li a h3:hover {
+  color: #000;
+}
+
+.projects li h4 {
+  color:
+}
+
+
+/* -- About Section
+------------------------------------------------------------- */
+.about {
+  background: url('../images/background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.headshot {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 100%;
+}
+
+.about h3 {
+  margin: 24px auto;
+  font-weight: 700;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+
+
+/* -- Skills Section
+------------------------------------------------------------- */
+.skills {
+
+}
+
+h3 span {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+.skill-list {
+  width: 100%;
+}
+
+.skill-list li {
+  float: left;
+  width: 20%;
+}
+
+.skill-list li:last-child {
+  float: right;
+}
+
+.skill-list svg {
+  width: 50%;
+  margin: 0 25%;
+  -webkit-animation: bgPulse 3s infinite alternate;
+}
+
+/* -- Contact Section
+------------------------------------------------------------- */
+.contact {
+  background: #000;
+}
+
+.contact h3 {
+  color: #fff;
+}
+
+.contact-list {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contact-list li {
+  float: left;
+  width: 100px;
+}
+
+.contact-list li svg {
+  fill: #333;
+  width: 50px;
+  height: 50px;
+  margin: 0 25px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.contact-list li svg:hover {
+  fill: #e74c3c;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/* -- Footer Section
+------------------------------------------------------------- */
+.footer {
+  background: #000;
+  padding: 0 0 20px 0;
+}
+
+.footer p {
+  color: #333;
+  letter-spacing: 2px;
+  font-size: 0.75em;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* -- Breakpoint 1 960px
+------------------------------------------------------------- */
+@media only screen and (max-width: 960px) {
+
+  .projects li {
+    width: 50%;
+  }
+
+}
+
+
+/* -- Breakpoint 1 620px
+------------------------------------------------------------- */
+@media only screen and (max-width: 620px) {
+
+  .projects li {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+}

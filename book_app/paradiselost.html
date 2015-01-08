@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+
+  <section class="wrapper">
+
+    <header>
+      <h1><a href="index.html">Peach's Picks </a></h1>
+      <a href="#" class="open-panel"><span class="fa fa-book fa-fw"></span>Menu</a>
+    </header>
+
+    <nav>
+      <a href="#" class="close-panel"> x </a>
+      <ul class="menu">
+        <li><span> Titles </span></li>
+        <li><a href="/dracula">Dracula</a></li>
+        <li><a href="/theshining">The Shining</a></li>
+        <li><a href="/frankenstein">Frankenstein</a></li>
+        <li><a href="/paradiselost">Paradise Lost</a></li>
+        <li><a href="/treasureisland">Treasure Island</a></li>
+        <li><span> Skins </span></li>
+        <li><a href="#" class="skins" id="skin1"> White </a></li>
+        <li><a href="#" class="skins" id="skin2"> Sepia </a></li>
+        <li><a href="#" class="skins" id="skin3">  Night </a></li>
+
+      </ul>
+    </nav><!-- end of fixed header content -->
+
+    <!-- Start new content here -->
+
+    <div id="book-content">
+      <p id="text"> REPLACE </p>
+    </div>
+
+  </section>
+
+  <script>
+
+  var container = document.getElementById("book-content")
+  var text = document.getElementById("text");
+  var skin1 = document.getElementById("skin1");
+  var skin2 = document.getElementById("skin2");
+  var skin3 = document.getElementById("skin3");
+
+  skin1.addEventListener("click", function(){
+    container.style.background = "#fff";
+    text.style.color = "#000";
+  });
+
+  skin2.addEventListener("click", function(){
+    container.style.background = "#f5f5dc";
+    text.style.color = "#000";
+  });
+
+  skin3.addEventListener("click", function(){
+    container.style.background = "#000";
+    text.style.color = "#fff";
+  });
+
+</script>
+</body>
+</html>
