@@ -14,6 +14,7 @@ var server = http.createServer(function(request, response){
   }else if (path === "/dracula"){
     fs.readFile("dracula.txt", function (err, data1){
       var text = data1.toString();
+      console.log("drac");
       var text1 = text.replace(/\n/g, "<br>");
       fs.readFile("dracula.html", function (err, data){
         var data = data.toString();
@@ -75,4 +76,4 @@ console.log("path is " + path)
     });
   }
 });
-server.listen(3000);
+server.listen(80);
